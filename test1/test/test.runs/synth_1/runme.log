@@ -1,0 +1,401 @@
+
+*** Running vivado
+    with args -log test.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source test.tcl -notrace
+Command: synth_design -top test -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8292 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 272.063 ; gain = 65.727
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'test' [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/test.v:1]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/clock_divider.v:1]
+	Parameter size bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (1#1) [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/clock_divider.v:1]
+INFO: [Synth 8-638] synthesizing module 'debounced' [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/dedounced.v:1]
+INFO: [Synth 8-256] done synthesizing module 'debounced' (2#1) [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/dedounced.v:1]
+INFO: [Synth 8-638] synthesizing module 'onepulse' [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/onepulse.v:1]
+INFO: [Synth 8-256] done synthesizing module 'onepulse' (3#1) [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/onepulse.v:1]
+INFO: [Synth 8-638] synthesizing module 'Player_control' [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/plyer_control.v:1]
+INFO: [Synth 8-638] synthesizing module 'PWM_generater' [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/PWM.v:1]
+INFO: [Synth 8-256] done synthesizing module 'PWM_generater' (4#1) [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/PWM.v:1]
+INFO: [Synth 8-226] default block is never used [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/plyer_control.v:38]
+INFO: [Synth 8-256] done synthesizing module 'Player_control' (5#1) [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/plyer_control.v:1]
+INFO: [Synth 8-256] done synthesizing module 'test' (6#1) [D:/new/Vivado/Vivado/final/test1/test/test.srcs/sources_1/imports/final/test.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 309.461 ; gain = 103.125
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 309.461 ; gain = 103.125
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/new/Vivado/Vivado/final/test1/test/test.srcs/constrs_1/imports/final/Basys3_Master.xdc]
+Finished Parsing XDC File [D:/new/Vivado/Vivado/final/test1/test/test.srcs/constrs_1/imports/final/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/new/Vivado/Vivado/final/test1/test/test.srcs/constrs_1/imports/final/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 592.578 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 592.578 ; gain = 386.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 592.578 ; gain = 386.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 592.578 ; gain = 386.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 592.578 ; gain = 386.242
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debounced 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module onepulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module PWM_generater 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module Player_control 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 592.578 ; gain = 386.242
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP count_duty0, operation Mode is: A*B.
+DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
+DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
+WARNING: [Synth 8-3917] design test has port Pmod_JB_2 driven by constant 1
+WARNING: [Synth 8-3917] design test has port Pmod_JB_4 driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 592.578 ; gain = 386.242
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 592.578 ; gain = 386.242
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|PWM_generater | A*B         | 25     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[0]' (FDS) to 'controler/now_freq_reg[7]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[2]' (FDR) to 'controler/now_freq_reg[4]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[3]' (FDR) to 'controler/now_freq_reg[8]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[4]' (FDR) to 'controler/now_freq_reg[5]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[5]' (FDR) to 'controler/now_freq_reg[6]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[6]' (FDR) to 'controler/now_freq_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\controler/now_freq_reg[7] )
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[9]' (FDR) to 'controler/now_freq_reg[10]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[10]' (FDR) to 'controler/now_freq_reg[11]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[11]' (FDR) to 'controler/now_freq_reg[12]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[12]' (FDR) to 'controler/now_freq_reg[13]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[13]' (FDR) to 'controler/now_freq_reg[14]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[14]' (FDR) to 'controler/now_freq_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[15]' (FDR) to 'controler/now_freq_reg[16]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[16]' (FDR) to 'controler/now_freq_reg[17]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[17]' (FDR) to 'controler/now_freq_reg[18]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[18]' (FDR) to 'controler/now_freq_reg[19]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[19]' (FDR) to 'controler/now_freq_reg[20]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[20]' (FDR) to 'controler/now_freq_reg[21]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[21]' (FDR) to 'controler/now_freq_reg[22]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[22]' (FDR) to 'controler/now_freq_reg[23]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[23]' (FDR) to 'controler/now_freq_reg[24]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[24]' (FDR) to 'controler/now_freq_reg[25]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[25]' (FDR) to 'controler/now_freq_reg[26]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[26]' (FDR) to 'controler/now_freq_reg[27]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[27]' (FDR) to 'controler/now_freq_reg[28]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[28]' (FDR) to 'controler/now_freq_reg[29]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[29]' (FDR) to 'controler/now_freq_reg[30]'
+INFO: [Synth 8-3886] merging instance 'controler/now_freq_reg[30]' (FDR) to 'controler/now_freq_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controler/now_freq_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[31]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[30]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[29]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[28]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[27]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[26]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[25]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[24]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[23]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[22]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[21]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[20]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[19]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[18]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[17]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[16]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[15]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[14]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[13]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[12]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[11]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[10]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[9]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[7]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[6]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[5]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[4]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[3]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[2]) is unused and will be removed from module test.
+WARNING: [Synth 8-3332] Sequential element (controler/now_freq_reg[0]) is unused and will be removed from module test.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 592.578 ; gain = 386.242
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 592.578 ; gain = 386.242
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 599.246 ; gain = 392.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 599.246 ; gain = 392.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 620.535 ; gain = 414.199
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   194|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |    16|
+|5     |LUT2    |   469|
+|6     |LUT3    |    73|
+|7     |LUT4    |    53|
+|8     |LUT5    |     9|
+|9     |LUT6    |   113|
+|10    |FDCE    |    34|
+|11    |FDRE    |    25|
+|12    |IBUF    |     5|
+|13    |OBUF    |     3|
++------+--------+------+
+
+Report Instance Areas: 
++------+----------------+---------------+------+
+|      |Instance        |Module         |Cells |
++------+----------------+---------------+------+
+|1     |top             |               |   996|
+|2     |  clk16_divider |clock_divider  |    36|
+|3     |  controler     |Player_control |   899|
+|4     |    music_gen   |PWM_generater  |   882|
+|5     |  pb_1p_reset   |onepulse       |    46|
+|6     |  pb_deb_reset  |debounced      |     6|
++------+----------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 620.535 ; gain = 414.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 620.535 ; gain = 131.082
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 620.535 ; gain = 414.199
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 200 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+55 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 620.535 ; gain = 414.199
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 620.535 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 09 22:38:59 2016...
