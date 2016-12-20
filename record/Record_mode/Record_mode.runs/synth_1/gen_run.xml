@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1482266590">
+  <File Type="RDS-PROPCONSTRS" Name="Record_mode_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="Record_mode.tcl"/>
+  <File Type="RDS-RDS" Name="Record_mode.vds"/>
+  <File Type="RDS-UTIL" Name="Record_mode_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Record_mode_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Record_mode.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Record_mode_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Record_mode_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/record/Recording.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Recording.v"/>
+        <Attr Name="ImportTime" Val="1482183383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/PWM.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PWM.v"/>
+        <Attr Name="ImportTime" Val="1482180176"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/Keyboard Sample Code/OnePulse.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Keyboard Sample Code/OnePulse.v"/>
+        <Attr Name="ImportTime" Val="1478512050"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/plyer_control.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../plyer_control.v"/>
+        <Attr Name="ImportTime" Val="1482183401"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/onepulse.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../onepulse.v"/>
+        <Attr Name="ImportTime" Val="1476895476"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/KeysDecord.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../KeysDecord.v"/>
+        <Attr Name="ImportTime" Val="1482204356"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/dedounced.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../dedounced.v"/>
+        <Attr Name="ImportTime" Val="1476355118"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/clock_divider.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../clock_divider.v"/>
+        <Attr Name="ImportTime" Val="1475687999"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Keyboard Sample Code/KeyboardDecoder.v"/>
+        <Attr Name="ImportTime" Val="1478512050"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/test.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../test.v"/>
+        <Attr Name="ImportTime" Val="1482182226"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Record_mode"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/record/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Basys3_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1481304747"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="KeyboardCtrl_0"/>
+</GenRun>

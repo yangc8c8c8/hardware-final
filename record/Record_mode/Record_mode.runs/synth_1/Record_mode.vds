@@ -1,0 +1,639 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Dec 21 04:43:12 2016
+# Process ID: 6016
+# Current directory: D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1
+# Command line: vivado.exe -log Record_mode.vds -mode batch -messageDb vivado.pb -notrace -source Record_mode.tcl
+# Log file: D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/Record_mode.vds
+# Journal file: D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Record_mode.tcl -notrace
+Command: synth_design -top Record_mode -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8252 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 272.473 ; gain = 65.789
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Record_mode' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/test.v:1]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/clock_divider.v:1]
+	Parameter size bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (1#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/clock_divider.v:1]
+INFO: [Synth 8-638] synthesizing module 'debounced' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/dedounced.v:1]
+INFO: [Synth 8-256] done synthesizing module 'debounced' (2#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/dedounced.v:1]
+INFO: [Synth 8-638] synthesizing module 'onepulse' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/onepulse.v:1]
+INFO: [Synth 8-256] done synthesizing module 'onepulse' (3#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/onepulse.v:1]
+INFO: [Synth 8-638] synthesizing module 'KeyboardDecoder' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v:1]
+	Parameter INIT bound to: 2'b00 
+	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
+	Parameter GET_SIGNAL_DOWN bound to: 2'b10 
+	Parameter WAIT_RELEASE bound to: 2'b11 
+	Parameter IS_INIT bound to: 8'b10101010 
+	Parameter IS_EXTEND bound to: 8'b11100000 
+	Parameter IS_BREAK bound to: 8'b11110000 
+INFO: [Synth 8-638] synthesizing module 'KeyboardCtrl_0' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-6016-yshyang/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'KeyboardCtrl_0' (4#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-6016-yshyang/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'OnePulse' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/OnePulse.v:1]
+INFO: [Synth 8-256] done synthesizing module 'OnePulse' (5#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/OnePulse.v:1]
+INFO: [Synth 8-226] default block is never used [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v:64]
+INFO: [Synth 8-256] done synthesizing module 'KeyboardDecoder' (6#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v:1]
+INFO: [Synth 8-638] synthesizing module 'KeysDecoder' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/KeysDecord.v:1]
+INFO: [Synth 8-256] done synthesizing module 'KeysDecoder' (7#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/KeysDecord.v:1]
+INFO: [Synth 8-638] synthesizing module 'Player_control' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/plyer_control.v:1]
+INFO: [Synth 8-638] synthesizing module 'PWM_generater' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/PWM.v:1]
+INFO: [Synth 8-256] done synthesizing module 'PWM_generater' (8#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/PWM.v:1]
+INFO: [Synth 8-638] synthesizing module 'Recording' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Recording.v:1]
+INFO: [Synth 8-226] default block is never used [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Recording.v:42]
+INFO: [Synth 8-256] done synthesizing module 'Recording' (9#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Recording.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Player_control' (10#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/plyer_control.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Record_mode' (11#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/test.v:1]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[31]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[30]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[29]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[28]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[27]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[26]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[25]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[24]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[23]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[22]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[21]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[20]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[19]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[18]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[17]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[16]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[15]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[14]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[13]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[12]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[11]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[511]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[510]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[509]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[508]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[507]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[506]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[505]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[504]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[503]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[502]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[501]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[500]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[499]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[498]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[497]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[496]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[495]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[494]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[493]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[492]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[491]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[490]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[489]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[488]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[487]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[486]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[485]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[484]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[483]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[482]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[481]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[480]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[479]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[478]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[477]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[476]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[475]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[474]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[473]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[472]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[471]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[470]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[469]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[468]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[467]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[466]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[465]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[464]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[463]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[462]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[461]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[460]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[459]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[458]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[457]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[456]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[455]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[454]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[453]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[452]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[451]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[450]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[449]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[448]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[447]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[446]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[445]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[444]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[443]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[442]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[441]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[440]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[439]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[438]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[437]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[436]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[435]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[434]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[433]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 308.855 ; gain = 102.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 308.855 ; gain = 102.172
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'KeyboardCtrl_0' instantiated as 'keyboardDEC/inst' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v:33]
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-6016-yshyang/dcp/KeyboardCtrl_0_in_context.xdc] for cell 'keyboardDEC/inst'
+Finished Parsing XDC File [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-6016-yshyang/dcp/KeyboardCtrl_0_in_context.xdc] for cell 'keyboardDEC/inst'
+Parsing XDC File [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/constrs_1/imports/record/Basys3_Master.xdc]
+Finished Parsing XDC File [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/constrs_1/imports/record/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/constrs_1/imports/record/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Record_mode_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Record_mode_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 598.781 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 598.781 ; gain = 392.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 598.781 ; gain = 392.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-6016-yshyang/dcp/KeyboardCtrl_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-6016-yshyang/dcp/KeyboardCtrl_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-6016-yshyang/dcp/KeyboardCtrl_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-6016-yshyang/dcp/KeyboardCtrl_0_in_context.xdc, line 4).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 598.781 ; gain = 392.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 598.781 ; gain = 392.098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	              512 Bit    Registers := 1     
+	               48 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input    512 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	  49 Input     11 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debounced 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module onepulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module OnePulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module KeyboardDecoder 
+Detailed RTL Component Info : 
++---Registers : 
+	              512 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input    512 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 7     
+Module KeysDecoder 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 1     
+Module PWM_generater 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Recording 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module Player_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  49 Input     11 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 598.781 ; gain = 392.098
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP count_duty0, operation Mode is: A*B.
+DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
+DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
+DSP Report: Generating DSP count_duty0, operation Mode is: A*B.
+DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
+DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
+INFO: [Synth 8-5546] ROM "keyboardDEC/state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 598.781 ; gain = 392.098
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 598.781 ; gain = 392.098
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++---------------+---------------+-----------+----------------------+------------------+
+|Module Name    | RTL Object    | Inference | Size (Depth x Width) | Primitives       | 
++---------------+---------------+-----------+----------------------+------------------+
+|Player_control | REC/pitch_reg | Implied   | 512 x 11             | RAM256X1S x 22   | 
++---------------+---------------+-----------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|PWM_generater | A*B         | 25     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PWM_generater | A*B         | 25     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[511]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[510]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[509]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[508]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[507]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[506]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[505]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[504]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[503]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[502]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[501]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[500]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[499]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[498]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[497]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[496]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[495]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[494]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[493]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[492]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[491]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[490]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[489]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[488]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[487]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[486]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[485]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[484]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[483]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[482]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[481]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[480]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[479]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[478]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[477]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[476]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[475]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[474]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[473]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[472]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[471]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[470]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[469]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[468]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[467]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[466]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[465]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[464]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[463]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[462]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[461]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[460]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[459]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[458]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[457]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[456]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[455]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[454]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[453]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[452]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[451]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[450]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[449]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[448]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[447]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[446]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[445]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[444]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[443]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[442]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[441]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[440]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[439]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[438]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[437]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[436]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[435]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[434]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[433]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[432]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[431]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[430]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[429]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[428]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[427]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[426]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[425]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[424]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[423]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[422]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[421]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[420]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[419]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[418]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[417]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[416]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[415]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[414]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[413]) is unused and will be removed from module Record_mode.
+WARNING: [Synth 8-3332] Sequential element (keyboardDEC/key_down_reg[412]) is unused and will be removed from module Record_mode.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 598.781 ; gain = 392.098
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 598.781 ; gain = 392.098
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 614.289 ; gain = 407.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 614.289 ; gain = 407.605
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 642.605 ; gain = 435.922
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |KeyboardCtrl_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |KeyboardCtrl_0 |     1|
+|2     |BUFG           |     2|
+|3     |CARRY4         |   220|
+|4     |DSP48E1        |     2|
+|5     |LUT1           |    29|
+|6     |LUT2           |   475|
+|7     |LUT3           |   132|
+|8     |LUT4           |   104|
+|9     |LUT5           |   155|
+|10    |LUT6           |   231|
+|11    |RAM256X1S      |    22|
+|12    |FDCE           |   130|
+|13    |FDRE           |    92|
+|14    |IBUF           |     4|
+|15    |OBUF           |     3|
++------+---------------+------+
+
+Report Instance Areas: 
++------+----------------+----------------+------+
+|      |Instance        |Module          |Cells |
++------+----------------+----------------+------+
+|1     |top             |                |  1613|
+|2     |  clk16_divider |clock_divider   |    36|
+|3     |  controler     |Player_control  |  1175|
+|4     |    REC         |Recording       |    71|
+|5     |    beat_gen    |PWM_generater   |   131|
+|6     |    music_gen   |PWM_generater_0 |   973|
+|7     |  keyboardDEC   |KeyboardDecoder |   160|
+|8     |    op          |OnePulse        |     3|
+|9     |  keysDEC       |KeysDecoder     |   200|
+|10    |  pb_1p_reset   |onepulse        |     5|
+|11    |  pb_deb_reset  |debounced       |     6|
++------+----------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 642.605 ; gain = 435.922
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 485 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 642.605 ; gain = 145.996
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 642.605 ; gain = 435.922
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 248 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 22 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 22 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 642.605 ; gain = 435.922
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 642.605 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 21 04:43:55 2016...

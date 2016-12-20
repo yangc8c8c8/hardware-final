@@ -1,0 +1,168 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Dec 21 03:00:15 2016
+# Process ID: 5344
+# Current directory: D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1
+# Command line: vivado.exe -log Record_mode.vds -mode batch -messageDb vivado.pb -notrace -source Record_mode.tcl
+# Log file: D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/Record_mode.vds
+# Journal file: D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Record_mode.tcl -notrace
+Command: synth_design -top Record_mode -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 952 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 272.176 ; gain = 65.863
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Record_mode' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/test.v:1]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/clock_divider.v:1]
+	Parameter size bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (1#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/clock_divider.v:1]
+INFO: [Synth 8-638] synthesizing module 'debounced' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/dedounced.v:1]
+INFO: [Synth 8-256] done synthesizing module 'debounced' (2#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/dedounced.v:1]
+INFO: [Synth 8-638] synthesizing module 'onepulse' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/onepulse.v:1]
+INFO: [Synth 8-256] done synthesizing module 'onepulse' (3#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/onepulse.v:1]
+INFO: [Synth 8-638] synthesizing module 'KeyboardDecoder' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v:1]
+	Parameter INIT bound to: 2'b00 
+	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
+	Parameter GET_SIGNAL_DOWN bound to: 2'b10 
+	Parameter WAIT_RELEASE bound to: 2'b11 
+	Parameter IS_INIT bound to: 8'b10101010 
+	Parameter IS_EXTEND bound to: 8'b11100000 
+	Parameter IS_BREAK bound to: 8'b11110000 
+INFO: [Synth 8-638] synthesizing module 'KeyboardCtrl_0' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-5344-yshyang/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'KeyboardCtrl_0' (4#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/.Xil/Vivado-5344-yshyang/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'OnePulse' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/OnePulse.v:1]
+INFO: [Synth 8-256] done synthesizing module 'OnePulse' (5#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/OnePulse.v:1]
+INFO: [Synth 8-226] default block is never used [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v:64]
+INFO: [Synth 8-256] done synthesizing module 'KeyboardDecoder' (6#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v:1]
+INFO: [Synth 8-638] synthesizing module 'KeysDecoder' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/KeysDecord.v:1]
+INFO: [Synth 8-256] done synthesizing module 'KeysDecoder' (7#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/KeysDecord.v:1]
+INFO: [Synth 8-638] synthesizing module 'Player_control' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/plyer_control.v:1]
+INFO: [Synth 8-638] synthesizing module 'PWM_generater' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/PWM.v:1]
+INFO: [Synth 8-256] done synthesizing module 'PWM_generater' (8#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/PWM.v:1]
+INFO: [Synth 8-638] synthesizing module 'Recording' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Recording.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Recording' (9#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Recording.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Player_control' (10#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/plyer_control.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Record_mode' (11#1) [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/test.v:1]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[31]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[30]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[29]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[28]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[27]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[26]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[25]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[24]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[23]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[22]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[21]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[20]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[19]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[18]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[17]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[16]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[15]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[14]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[13]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[12]
+WARNING: [Synth 8-3331] design Recording has unconnected port freq[11]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[511]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[510]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[509]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[508]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[507]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[506]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[505]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[504]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[503]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[502]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[501]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[500]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[499]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[498]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[497]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[496]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[495]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[494]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[493]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[492]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[491]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[490]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[489]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[488]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[487]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[486]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[485]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[484]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[483]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[482]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[481]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[480]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[479]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[478]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[477]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[476]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[475]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[474]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[473]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[472]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[471]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[470]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[469]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[468]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[467]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[466]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[465]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[464]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[463]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[462]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[461]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[460]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[459]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[458]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[457]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[456]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[455]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[454]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[453]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[452]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[451]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[450]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[449]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[448]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[447]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[446]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[445]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[444]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[443]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[442]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[441]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[440]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[439]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[438]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[437]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[436]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[435]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[434]
+WARNING: [Synth 8-3331] design KeysDecoder has unconnected port key_down[433]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:11 ; elapsed = 00:02:20 . Memory (MB): peak = 2063.238 ; gain = 1856.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:25 ; elapsed = 00:02:35 . Memory (MB): peak = 2063.238 ; gain = 1856.926
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'KeyboardCtrl_0' instantiated as 'keyboardDEC/inst' [D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/imports/record/Keyboard Sample Code/KeyboardDecoder.v:33]
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
