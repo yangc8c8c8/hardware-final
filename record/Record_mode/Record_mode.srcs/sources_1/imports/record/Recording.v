@@ -1,8 +1,9 @@
-module Recording(reset,play,Begin,freq,beat,freqREC);
+module Record(reset,play,Begin,freq,beat,freqREC,start);
 	input  reset,Begin,play;
 	input  [31:0]freq;
 	input  beat;
 	output [31:0]freqREC;
+	output start;
 	
 	`define IDLEstate   2'b00
 	`define RECORDstate 2'b01
@@ -69,6 +70,7 @@ module Recording(reset,play,Begin,freq,beat,freqREC);
 		endcase
 	end
 	
+	assign start   =state==`RECORDstate?1'd1:1'd0;
 	assign freqREC =state==`PLAYstate?{21'd0,pitch[beat_num]}:32'd0; 
 	assign contPLAY=play &&(beat_num<address)	  ;
 	assign contREC =Begin&&(beat_num<`MAXbeat_num);

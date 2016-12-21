@@ -58,6 +58,7 @@ set rc [catch {
   {D:/new/Vivado/Vivado/final/record/Keyboard Sample Code/ip/Keyboard-Controller/keyboard_cntr_1.0}
 } [current_project]
   set_property ip_output_repo d:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.cache/ip [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet D:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.runs/synth_1/Record_mode.dcp
   add_files -quiet d:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.dcp
   set_property netlist_only true [get_files d:/new/Vivado/Vivado/final/record/Record_mode/Record_mode.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.dcp]

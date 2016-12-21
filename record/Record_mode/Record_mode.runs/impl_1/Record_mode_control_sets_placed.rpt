@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Wed Dec 21 04:44:34 2016
+| Date         : Thu Dec 22 02:26:50 2016
 | Host         : yshyang running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Record_mode_control_sets_placed.rpt
 | Design       : Record_mode
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    15 |
-| Unused register locations in slices containing registers |    43 |
+| Number of unique control sets                            |    24 |
+| Unused register locations in slices containing registers |    83 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,36 +33,45 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              24 |            6 |
-| No           | No                    | Yes                    |             128 |           50 |
-| No           | Yes                   | No                     |              11 |            5 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              89 |           35 |
-| Yes          | Yes                   | No                     |              57 |           28 |
+| No           | No                    | No                     |              78 |           26 |
+| No           | No                    | Yes                    |             128 |           48 |
+| No           | Yes                   | No                     |              27 |           11 |
+| Yes          | No                    | No                     |               4 |            1 |
+| Yes          | No                    | Yes                    |              89 |           30 |
+| Yes          | Yes                   | No                     |              71 |           26 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+--------------------------------------------------------+----------------------------+------------------+----------------+
-|      Clock Signal     |                      Enable Signal                     |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
-+-----------------------+--------------------------------------------------------+----------------------------+------------------+----------------+
-|  clk_IBUF_BUFG        | keyboardDEC/inst/inst/Ps2Interface_i/bits_count        | reset_IBUF                 |                2 |              4 |
-|  clk16_divider/out[0] |                                                        |                            |                1 |              6 |
-|  clk_IBUF_BUFG        | keyboardDEC/inst/inst/Ps2Interface_i/rx_valid          | reset_IBUF                 |                2 |              8 |
-|  clk_IBUF_BUFG        | keyboardDEC/inst/inst/Ps2Interface_i/rx_finish         | reset_IBUF                 |                1 |              8 |
-|  beat                 | controler/REC/address[8]_i_1_n_0                       | pb_1p_reset/reset_onepulse |                3 |              9 |
-|  clk_IBUF_BUFG        | keyboardDEC/key[9]_i_1_n_0                             | reset_IBUF                 |                2 |             10 |
-|  beat                 |                                                        | pb_1p_reset/reset_onepulse |                5 |             11 |
-|  clk_IBUF_BUFG        | keyboardDEC/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | reset_IBUF                 |                4 |             11 |
-|  clk_IBUF_BUFG        |                                                        |                            |                5 |             18 |
-|  beat                 | controler/REC/count_duty0                              |                            |               11 |             44 |
-|  beat                 | controler/REC/count_duty0_11                           |                            |               11 |             44 |
-|  clk_IBUF_BUFG        | keyboardDEC/op/E[0]                                    | reset_IBUF                 |               24 |             48 |
-|  clk_IBUF_BUFG        | keyboardDEC/E[0]                                       | reset_IBUF                 |               25 |             48 |
-|  clk_IBUF_BUFG        |                                                        | reset_IBUF                 |               32 |             62 |
-|  clk_IBUF_BUFG        |                                                        | pb_1p_reset/reset_onepulse |               18 |             66 |
-+-----------------------+--------------------------------------------------------+----------------------------+------------------+----------------+
++---------------------------+--------------------------------------------------------+-------------------------------------+------------------+----------------+
+|        Clock Signal       |                      Enable Signal                     |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
++---------------------------+--------------------------------------------------------+-------------------------------------+------------------+----------------+
+|  clk26_divider/CLK        |                                                        |                                     |                1 |              1 |
+|  lopt_1                   |                                                        | reset_IBUF                          |                2 |              2 |
+|  clk13_divider/CLK        |                                                        |                                     |                1 |              4 |
+|  clk13_divider/CLK        | nolabel_line34/nolabel_line10/value[3]_i_1_n_0         |                                     |                1 |              4 |
+|  clk26_divider/CLK        |                                                        | controler/REC/SR[0]                 |                1 |              4 |
+|  clk26_divider/CLK        | nolabel_line34/BCD1[3]_i_1_n_0                         | controler/REC/SR[0]                 |                1 |              4 |
+|  clk_IBUF_BUFG            | keyboardDEC/inst/inst/Ps2Interface_i/bits_count        | reset_IBUF                          |                1 |              4 |
+|  clk16_divider/num_reg[0] |                                                        |                                     |                2 |              6 |
+|  clk_IBUF_BUFG            | keyboardDEC/inst/inst/Ps2Interface_i/rx_valid          | reset_IBUF                          |                1 |              8 |
+|  clk_IBUF_BUFG            | keyboardDEC/inst/inst/Ps2Interface_i/rx_finish         | reset_IBUF                          |                3 |              8 |
+|  lopt_1                   |                                                        |                                     |                5 |              8 |
+|  beat                     | controler/REC/address[8]_i_1_n_0                       | pb_1p_reset/reset_onepulse          |                4 |              9 |
+|  clk_IBUF_BUFG            | keyboardDEC/key[9]_i_1_n_0                             | reset_IBUF                          |                2 |             10 |
+|  lopt_1                   |                                                        | nolabel_line36/pixel_cnt[9]_i_1_n_0 |                4 |             10 |
+|  lopt_1                   | nolabel_line36/line_cnt                                | nolabel_line36/line_cnt[9]_i_1_n_0  |                4 |             10 |
+|  beat                     |                                                        | pb_1p_reset/reset_onepulse          |                4 |             11 |
+|  clk_IBUF_BUFG            | keyboardDEC/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | reset_IBUF                          |                3 |             11 |
+|  beat                     | controler/REC/pitch_reg_0_255_0_0_i_3_n_0              |                                     |               11 |             44 |
+|  beat                     | controler/REC/pitch_reg_256_511_0_0_i_1_n_0            |                                     |               11 |             44 |
+|  clk_IBUF_BUFG            | keyboardDEC/op/E[0]                                    | reset_IBUF                          |               20 |             48 |
+|  clk_IBUF_BUFG            | keyboardDEC/E[0]                                       | reset_IBUF                          |               17 |             48 |
+|  clk_IBUF_BUFG            |                                                        |                                     |               17 |             59 |
+|  clk_IBUF_BUFG            |                                                        | reset_IBUF                          |               30 |             62 |
+|  clk_IBUF_BUFG            |                                                        | pb_1p_reset/reset_onepulse          |               18 |             66 |
++---------------------------+--------------------------------------------------------+-------------------------------------+------------------+----------------+
 
 

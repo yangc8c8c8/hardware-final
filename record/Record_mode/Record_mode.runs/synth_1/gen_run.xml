@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1482266590">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1482344639">
   <File Type="RDS-PROPCONSTRS" Name="Record_mode_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="Record_mode.tcl"/>
   <File Type="RDS-RDS" Name="Record_mode.vds"/>
@@ -10,6 +10,22 @@
   <File Type="VDS-TIMING-PB" Name="Record_mode_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/pixel.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pixel.v"/>
+        <Attr Name="ImportTime" Val="1482342059"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/record/Recording.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Recording.v"/>
@@ -32,6 +48,24 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Keyboard Sample Code/OnePulse.v"/>
         <Attr Name="ImportTime" Val="1478512050"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/seven_segments.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../seven_segments.v"/>
+        <Attr Name="ImportTime" Val="1476360996"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/vga.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../vga.v"/>
+        <Attr Name="ImportTime" Val="1482331554"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -91,12 +125,27 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/record/Timer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Timer.v"/>
+        <Attr Name="ImportTime" Val="1482317334"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/record/test.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../test.v"/>
         <Attr Name="ImportTime" Val="1482182226"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../out.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>

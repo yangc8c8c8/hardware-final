@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date             : Wed Dec 21 04:45:05 2016
+| Date             : Thu Dec 22 02:27:20 2016
 | Host             : yshyang running 64-bit major release  (build 9200)
 | Command          : report_power -file Record_mode_power_routed.rpt -pb Record_mode_power_summary_routed.pb -rpx Record_mode_power_routed.rpx
 | Design           : Record_mode
@@ -29,18 +29,18 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+-------+
-| Total On-Chip Power (W)  | 3.570 |
-| Dynamic (W)              | 3.488 |
-| Device Static (W)        | 0.082 |
-| Effective TJA (C/W)      | 5.0   |
-| Max Ambient (C)          | 67.2  |
-| Junction Temperature (C) | 42.8  |
-| Confidence Level         | Low   |
-| Setting File             | ---   |
-| Simulation Activity File | ---   |
-| Design Nets Matched      | NA    |
-+--------------------------+-------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 23.256 (Junction temp exceeded!) |
+| Dynamic (W)              | 22.738                           |
+| Device Static (W)        | 0.519                            |
+| Effective TJA (C/W)      | 5.0                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 
 
 1.1 On-Chip Components
@@ -49,19 +49,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |     0.663 |     1954 |       --- |             --- |
-|   LUT as Logic           |     0.603 |     1139 |     20800 |            5.48 |
-|   CARRY4                 |     0.028 |      224 |      8150 |            2.75 |
-|   Register               |     0.025 |      309 |     41600 |            0.74 |
-|   BUFG                   |     0.007 |        2 |        32 |            6.25 |
-|   F7/F8 Muxes            |    <0.001 |       67 |     32600 |            0.21 |
+| Slice Logic              |     1.016 |     2448 |       --- |             --- |
+|   LUT as Logic           |     0.892 |     1386 |     20800 |            6.66 |
+|   Register               |     0.052 |      397 |     41600 |            0.95 |
+|   CARRY4                 |     0.049 |      254 |      8150 |            3.12 |
+|   BUFG                   |     0.013 |        3 |        32 |            9.38 |
+|   F7/F8 Muxes            |     0.010 |       94 |     32600 |            0.29 |
+|   Others                 |     0.000 |       78 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       88 |      9600 |            0.92 |
-|   Others                 |     0.000 |       23 |       --- |             --- |
-| Signals                  |     0.689 |     1491 |       --- |             --- |
-| DSPs                     |     0.000 |        2 |        90 |            2.22 |
-| I/O                      |     2.136 |        9 |       106 |            8.49 |
-| Static Power             |     0.082 |          |           |                 |
-| Total                    |     3.570 |          |           |                 |
+| Signals                  |     1.330 |     1972 |       --- |             --- |
+| Block RAM                |     0.643 |       21 |        50 |           42.00 |
+| DSPs                     |     0.166 |        3 |        90 |            3.33 |
+| I/O                      |    19.583 |       34 |       106 |           32.08 |
+| Static Power             |     0.519 |          |           |                 |
+| Total                    |    23.256 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.383 |       1.364 |      0.019 |
-| Vccaux    |       1.800 |     0.091 |       0.078 |      0.013 |
-| Vcco33    |       3.300 |     0.602 |       0.601 |      0.001 |
+| Vccint    |       1.000 |     3.467 |       3.110 |      0.357 |
+| Vccaux    |       1.800 |     0.771 |       0.717 |      0.053 |
+| Vcco33    |       3.300 |     5.540 |       5.539 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.084 |       0.057 |      0.027 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -135,47 +136,97 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------------------------+-----------+
-| Name                          | Power (W) |
-+-------------------------------+-----------+
-| Record_mode                   |     3.488 |
-|   REC/pitch_reg_0_255_0_0     |     0.000 |
-|   REC/pitch_reg_0_255_10_10   |     0.000 |
-|   REC/pitch_reg_0_255_1_1     |     0.000 |
-|   REC/pitch_reg_0_255_2_2     |     0.000 |
-|   REC/pitch_reg_0_255_3_3     |     0.000 |
-|   REC/pitch_reg_0_255_4_4     |     0.000 |
-|   REC/pitch_reg_0_255_5_5     |     0.000 |
-|   REC/pitch_reg_0_255_6_6     |     0.000 |
-|   REC/pitch_reg_0_255_7_7     |     0.000 |
-|   REC/pitch_reg_0_255_8_8     |     0.000 |
-|   REC/pitch_reg_0_255_9_9     |     0.000 |
-|   REC/pitch_reg_256_511_0_0   |     0.000 |
-|   REC/pitch_reg_256_511_10_10 |     0.000 |
-|   REC/pitch_reg_256_511_1_1   |     0.000 |
-|   REC/pitch_reg_256_511_2_2   |     0.000 |
-|   REC/pitch_reg_256_511_3_3   |     0.000 |
-|   REC/pitch_reg_256_511_4_4   |     0.000 |
-|   REC/pitch_reg_256_511_5_5   |     0.000 |
-|   REC/pitch_reg_256_511_6_6   |     0.000 |
-|   REC/pitch_reg_256_511_7_7   |     0.000 |
-|   REC/pitch_reg_256_511_8_8   |     0.000 |
-|   REC/pitch_reg_256_511_9_9   |     0.000 |
-|   clk16_divider               |     0.046 |
-|   controler                   |     0.664 |
-|     REC                       |     0.290 |
-|     beat_gen                  |     0.013 |
-|     music_gen                 |     0.361 |
-|   keyboardDEC                 |     0.535 |
-|     inst                      |     0.535 |
-|       inst                    |     0.535 |
-|         Ps2Interface_i        |     0.471 |
-|           IOBUF_inst_0        |     0.044 |
-|           IOBUF_inst_1        |     0.007 |
-|     op                        |     0.000 |
-|   keysDEC                     |     0.010 |
-|   pb_1p_reset                 |     0.000 |
-|   pb_deb_reset                |     0.000 |
-+-------------------------------+-----------+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| Record_mode                                      |    22.738 |
+|   clk13_divider                                  |     0.044 |
+|   clk16_divider                                  |     0.049 |
+|   clk26_divider                                  |     0.072 |
+|   clk2_divider                                   |     0.026 |
+|   controler                                      |     1.815 |
+|     Piano                                        |     1.246 |
+|       blk_mem_gen_0_inst                         |     0.947 |
+|         U0                                       |     0.947 |
+|           inst_blk_mem_gen                       |     0.947 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.947 |
+|               valid.cstr                         |     0.947 |
+|                 bindec_a.bindec_inst_a           |    <0.001 |
+|                 has_mux_a.A                      |     0.229 |
+|                 ramloop[0].ram.r                 |     0.012 |
+|                   prim_init.ram                  |     0.012 |
+|                 ramloop[10].ram.r                |     0.006 |
+|                   prim_init.ram                  |     0.006 |
+|                 ramloop[11].ram.r                |     0.004 |
+|                   prim_init.ram                  |     0.004 |
+|                 ramloop[12].ram.r                |     0.017 |
+|                   prim_init.ram                  |     0.017 |
+|                 ramloop[13].ram.r                |     0.010 |
+|                   prim_init.ram                  |     0.010 |
+|                 ramloop[14].ram.r                |     0.010 |
+|                   prim_init.ram                  |     0.010 |
+|                 ramloop[15].ram.r                |     0.186 |
+|                   prim_init.ram                  |     0.186 |
+|                 ramloop[16].ram.r                |     0.190 |
+|                   prim_init.ram                  |     0.190 |
+|                 ramloop[17].ram.r                |     0.189 |
+|                   prim_init.ram                  |     0.189 |
+|                 ramloop[1].ram.r                 |     0.009 |
+|                   prim_init.ram                  |     0.009 |
+|                 ramloop[2].ram.r                 |     0.008 |
+|                   prim_init.ram                  |     0.008 |
+|                 ramloop[3].ram.r                 |     0.006 |
+|                   prim_init.ram                  |     0.006 |
+|                 ramloop[4].ram.r                 |     0.021 |
+|                   prim_init.ram                  |     0.021 |
+|                 ramloop[5].ram.r                 |     0.013 |
+|                   prim_init.ram                  |     0.013 |
+|                 ramloop[6].ram.r                 |     0.013 |
+|                   prim_init.ram                  |     0.013 |
+|                 ramloop[7].ram.r                 |     0.008 |
+|                   prim_init.ram                  |     0.008 |
+|                 ramloop[8].ram.r                 |     0.009 |
+|                   prim_init.ram                  |     0.009 |
+|                 ramloop[9].ram.r                 |     0.006 |
+|                   prim_init.ram                  |     0.006 |
+|     REC                                          |     0.267 |
+|       pitch_reg_0_255_0_0                        |     0.000 |
+|       pitch_reg_0_255_10_10                      |     0.000 |
+|       pitch_reg_0_255_1_1                        |     0.000 |
+|       pitch_reg_0_255_2_2                        |     0.000 |
+|       pitch_reg_0_255_3_3                        |     0.000 |
+|       pitch_reg_0_255_4_4                        |     0.000 |
+|       pitch_reg_0_255_5_5                        |     0.000 |
+|       pitch_reg_0_255_6_6                        |     0.000 |
+|       pitch_reg_0_255_7_7                        |     0.000 |
+|       pitch_reg_0_255_8_8                        |     0.000 |
+|       pitch_reg_0_255_9_9                        |     0.000 |
+|       pitch_reg_256_511_0_0                      |     0.000 |
+|       pitch_reg_256_511_10_10                    |     0.000 |
+|       pitch_reg_256_511_1_1                      |     0.000 |
+|       pitch_reg_256_511_2_2                      |     0.000 |
+|       pitch_reg_256_511_3_3                      |     0.000 |
+|       pitch_reg_256_511_4_4                      |     0.000 |
+|       pitch_reg_256_511_5_5                      |     0.000 |
+|       pitch_reg_256_511_6_6                      |     0.000 |
+|       pitch_reg_256_511_7_7                      |     0.000 |
+|       pitch_reg_256_511_8_8                      |     0.000 |
+|       pitch_reg_256_511_9_9                      |     0.000 |
+|     beat_gen                                     |     0.012 |
+|     music_gen                                    |     0.289 |
+|   keyboardDEC                                    |     0.549 |
+|     inst                                         |     0.547 |
+|       inst                                       |     0.547 |
+|         Ps2Interface_i                           |     0.491 |
+|           IOBUF_inst_0                           |     0.045 |
+|           IOBUF_inst_1                           |     0.007 |
+|     op                                           |     0.000 |
+|   keysDEC                                        |     0.058 |
+|   nolabel_line34                                 |     0.253 |
+|     nolabel_line10                               |     0.214 |
+|   nolabel_line36                                 |     0.193 |
+|   pb_1p_reset                                    |     0.000 |
+|   pb_deb_reset                                   |     0.000 |
++--------------------------------------------------+-----------+
 
 
