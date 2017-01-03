@@ -6,6 +6,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports clk]
 # Switches
 set_property PACKAGE_PIN V17 [get_ports {Begin}]
 set_property IOSTANDARD LVCMOS33 [get_ports {Begin}]
+set_property PACKAGE_PIN T1 [get_ports {EDIT}]
+set_property IOSTANDARD LVCMOS33 [get_ports {EDIT}]
 set_property PACKAGE_PIN R2 [get_ports {Play}]
 set_property IOSTANDARD LVCMOS33 [get_ports {Play}]
 

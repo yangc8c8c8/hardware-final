@@ -1,0 +1,268 @@
+//reg  [4:0]pitch_shift;
+//reg  [9:0]pressedREC[0:23];
+	//reg  [9:0]pressedREC_w[0:23];
+/*
+	
+	always@(posedge beat_slow )begin
+		if(reset)begin
+			pressedREC  [0] <=10'd0;
+			pressedREC_w[0] <=10'd0;
+			pressedREC  [1] <=10'd0;
+			pressedREC_w[1] <=10'd0;
+			pressedREC  [2] <=10'd0;
+			pressedREC_w[2] <=10'd0;
+			pressedREC  [3] <=10'd0;
+			pressedREC_w[3] <=10'd0;
+			pressedREC  [4] <=10'd0;
+			pressedREC_w[4] <=10'd0;
+			pressedREC  [5] <=10'd0;
+			pressedREC_w[5] <=10'd0;
+			pressedREC  [6] <=10'd0;
+			pressedREC_w[6] <=10'd0;
+			pressedREC  [7] <=10'd0;
+			pressedREC_w[7] <=10'd0;
+			pressedREC  [8] <=10'd0;
+			pressedREC_w[8] <=10'd0;
+			pressedREC  [9] <=10'd0;
+			pressedREC_w[9] <=10'd0;
+			pressedREC  [10]<=10'd0;
+			pressedREC_w[10]<=10'd0;
+			pressedREC  [11]<=10'd0;
+			pressedREC_w[11]<=10'd0;
+			pressedREC  [12]<=10'd0;
+			pressedREC_w[12]<=10'd0;
+			pressedREC  [13]<=10'd0;
+			pressedREC_w[13]<=10'd0;
+			pressedREC  [14]<=10'd0;
+			pressedREC_w[14]<=10'd0;
+			pressedREC  [15]<=10'd0;
+			pressedREC_w[15]<=10'd0;
+			pressedREC  [16]<=10'd0;
+			pressedREC_w[16]<=10'd0;
+			pressedREC  [17]<=10'd0;
+			pressedREC_w[17]<=10'd0;
+			pressedREC  [18]<=10'd0;
+			pressedREC_w[18]<=10'd0;
+			pressedREC  [19]<=10'd0;
+			pressedREC_w[19]<=10'd0;
+			pressedREC  [20]<=10'd0;
+			pressedREC_w[20]<=10'd0;
+			pressedREC  [21]<=10'd0;
+			pressedREC_w[21]<=10'd0;
+			pressedREC  [22]<=10'd0;
+			pressedREC_w[22]<=10'd0;
+			pressedREC  [23]<=10'd0;
+			pressedREC_w[23]<=10'd0;
+		end
+		else begin
+			pressedREC  [0] <=pressed;
+			pressedREC_w[0] <=pressed_w;
+			pressedREC  [1] <=pressedREC  [0];
+			pressedREC_w[1] <=pressedREC_w[0];
+			pressedREC  [2] <=pressedREC  [1];
+			pressedREC_w[2] <=pressedREC_w[1];
+			pressedREC  [3] <=pressedREC  [2];
+			pressedREC_w[3] <=pressedREC_w[2];
+			pressedREC  [4] <=pressedREC  [3];
+			pressedREC_w[4] <=pressedREC_w[3];
+			pressedREC  [5] <=pressedREC  [4];
+			pressedREC_w[5] <=pressedREC_w[4];
+			pressedREC  [6] <=pressedREC  [5];
+			pressedREC_w[6] <=pressedREC_w[5];
+			pressedREC  [7] <=pressedREC  [6];
+			pressedREC_w[7] <=pressedREC_w[6];
+			pressedREC  [8] <=pressedREC  [7];
+			pressedREC_w[8] <=pressedREC_w[7];
+			pressedREC  [9] <=pressedREC  [8];
+			pressedREC_w[9] <=pressedREC_w[8];
+			pressedREC  [10]<=pressedREC  [9];
+			pressedREC_w[10]<=pressedREC_w[9];
+			pressedREC  [11]<=pressedREC  [10];
+			pressedREC_w[11]<=pressedREC_w[10];
+			pressedREC  [12]<=pressedREC  [11];
+			pressedREC_w[12]<=pressedREC_w[11];
+			pressedREC  [13]<=pressedREC  [12];
+			pressedREC_w[13]<=pressedREC_w[12];
+			pressedREC  [14]<=pressedREC  [13];
+			pressedREC_w[14]<=pressedREC_w[13];
+			pressedREC  [15]<=pressedREC  [14];
+			pressedREC_w[15]<=pressedREC_w[14];
+			pressedREC  [16]<=pressedREC  [15];
+			pressedREC_w[16]<=pressedREC_w[15];
+			pressedREC  [17]<=pressedREC  [16];
+			pressedREC_w[17]<=pressedREC_w[16];
+			pressedREC  [18]<=pressedREC  [17];
+			pressedREC_w[18]<=pressedREC_w[17];
+			pressedREC  [19]<=pressedREC  [18];
+			pressedREC_w[19]<=pressedREC_w[18];
+			pressedREC  [20]<=pressedREC  [19];
+			pressedREC_w[20]<=pressedREC_w[19];
+			pressedREC  [21]<=pressedREC  [20];
+			pressedREC_w[21]<=pressedREC_w[20];
+			pressedREC  [22]<=pressedREC  [21];
+			pressedREC_w[22]<=pressedREC_w[21];
+			pressedREC  [23]<=pressedREC  [22];
+			pressedREC_w[23]<=pressedREC_w[22];
+		end
+	end
+	
+	always@(posedge shift_beat)begin
+		if(reset)
+			pitch_shift<=5'd0;
+		else if(beat_slow)
+			pitch_shift<=5'd0;
+		else
+			pitch_shift<=pitch_shift==5'd15 ?5'd0:pitch_shift+5'd1;
+	end
+	*/
+/*
+			if(v_cnt+pitch_shift>10'd368)begin
+			    if(v_cnt+pitch_shift<=10'd384)begin
+			        if(h_cnt>=pressedREC[0]&&h_cnt<pressedREC_w[0])
+					   pixel_proper=orange;
+				    else
+					   pixel_proper=12'd0;
+			    end
+			    else begin
+			         pixel_proper=12'd0;
+			    end
+			end
+			else if(v_cnt+pitch_shift>10'd352)begin
+				if(h_cnt>=pressedREC[1]&&h_cnt<pressedREC_w[1])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd336)begin
+				if(h_cnt>=pressedREC[2]&&h_cnt<pressedREC_w[2])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd320)begin
+				if(h_cnt>=pressedREC[3]&&h_cnt<pressedREC_w[3])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd304)begin
+				if(h_cnt>=pressedREC[4]&&h_cnt<pressedREC_w[4])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd288)begin
+				if(h_cnt>=pressedREC[5]&&h_cnt<pressedREC_w[5])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd272)begin
+				if(h_cnt>=pressedREC[6]&&h_cnt<pressedREC_w[6])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd256)begin
+				if(h_cnt>=pressedREC[7]&&h_cnt<pressedREC_w[7])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd240)begin
+				if(h_cnt>=pressedREC[8]&&h_cnt<pressedREC_w[8])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd224)begin
+				if(h_cnt>=pressedREC[9]&&h_cnt<pressedREC_w[9])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd208)begin
+				if(h_cnt>=pressedREC[10]&&h_cnt<pressedREC_w[10])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd192)begin
+				if(h_cnt>=pressedREC[11]&&h_cnt<pressedREC_w[11])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd176)begin
+				if(h_cnt>=pressedREC[12]&&h_cnt<pressedREC_w[12])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd160)begin
+				if(h_cnt>=pressedREC[13]&&h_cnt<pressedREC_w[13])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd144)begin
+				if(h_cnt>=pressedREC[14]&&h_cnt<pressedREC_w[14])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd128)begin
+				if(h_cnt>=pressedREC[15]&&h_cnt<pressedREC_w[15])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd112)begin
+				if(h_cnt>=pressedREC[16]&&h_cnt<pressedREC_w[16])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd96)begin
+				if(h_cnt>=pressedREC[17]&&h_cnt<pressedREC_w[17])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd80)begin
+				if(h_cnt>=pressedREC[18]&&h_cnt<pressedREC_w[18])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd64)begin
+				if(h_cnt>=pressedREC[19]&&h_cnt<pressedREC_w[19])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd48)begin
+				if(h_cnt>=pressedREC[20]&&h_cnt<pressedREC_w[20])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd32)begin
+				if(h_cnt>=pressedREC[21]&&h_cnt<pressedREC_w[21])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else if(v_cnt+pitch_shift>10'd16)begin
+				if(h_cnt>=pressedREC[22]&&h_cnt<pressedREC_w[22])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			else begin
+				if(h_cnt>=pressedREC[23]&&h_cnt<pressedREC_w[23])
+					pixel_proper=orange;
+				else
+					pixel_proper=12'd0;
+			end
+			*/
