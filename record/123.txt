@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module Record(reset,play,Begin,beat,freqDEC_REC,start,beat_num,
 			  clk2,arbiter,keys,h_cnt,v_cnt,vga_valid,shift_beat,RED,GREEN,BLUE);
 	input  reset,Begin,play;
@@ -196,4 +197,204 @@ module Record(reset,play,Begin,beat,freqDEC_REC,start,beat_num,
 	
 	//******************DISPLAY END****************************//
 	
+=======
+module Record(reset,play,Begin,beat,freqDEC_REC,start,beat_num,
+			  clk2,arbiter,keys,h_cnt,v_cnt,vga_valid,shift_beat,RED,GREEN,BLUE);
+	input  reset,Begin,play;
+	input  beat;
+	output [5:0]freqDEC_REC;
+	output start;
+	output [9:0]beat_num;
+	
+	input  clk2,vga_valid,shift_beat;
+	input  [5:0]arbiter;
+	input  [47:0]keys;
+	input  [9:0]h_cnt,v_cnt;
+	output [3:0]RED,GREEN,BLUE;
+	
+	`define IDLEstate   2'b00
+	`define RECORDstate 2'b01
+	`define PLAYstate   2'b10
+	`define STOPstate	2'b11
+	`define MAXbeat_num 10'd1023
+	
+	//recording variables
+	wire contREC,contPLAY;
+	reg [1:0]state,nextstate;
+	reg [9:0]max_address,nextmax_addr;
+	reg [9:0]beat_num,nextbeat_num;
+	reg [5:0]pitch;
+	wire [5:0]pitch_saved;
+	reg write_en,nextwrite_en;
+	
+	//display variables
+	wire [11:0]data,pixel_saved;
+	wire [16:0]pixel_addr;
+	wire [3:0]arbiter_mod12,arbiter_div12;
+	wire black;
+	wire [11:0]gray=12'b000011110000;
+	wire [11:0]orange=12'b111110110100;
+	reg  [11:0]pixel_proper;
+	reg  [9:0]pressed,pressed_w;
+	reg  [9:0]x[0:63];
+	reg	 [9:0]y[0:63];
+	reg	 [5:0]index;
+	reg  [63:0]active_y;
+	reg  [63:0]pixel_proper_helper;
+	integer i,j,k;
+	
+	
+	//---------------------memorying & playing------------------//
+	
+	blk_mem_gen_1 blk_mem_gen_1_inst(
+      .clka(clk2),
+      .clkb(clk2),
+      .wea(write_en),
+      .addra(beat_num),
+      .addrb(beat_num),
+      .dina(pitch),
+      .doutb(pitch_saved)
+    ); 
+	
+	always @(posedge beat)begin
+		if(reset)begin
+			state		<=`IDLEstate;
+			beat_num	<=10'd0;
+			max_address <=10'd0;
+			write_en	<=1'b0;
+			pitch		<=6'd0;
+		end
+		else begin
+			state		<=nextstate;
+			beat_num	<=nextbeat_num;
+			max_address <=nextmax_addr;
+			write_en	<=nextwrite_en;
+			pitch		<=arbiter;
+		end
+	end
+    
+	always @(*)begin
+		case(state)
+			`IDLEstate:begin
+				nextstate	=Begin?`RECORDstate:
+							 play ?`PLAYstate  :`IDLEstate;
+				nextbeat_num=10'd0;
+				nextmax_addr=max_address;
+				nextwrite_en=Begin?1'b1:1'b0;
+			end
+			`RECORDstate:begin
+				nextstate	=contREC?`RECORDstate :`IDLEstate;
+				nextbeat_num=contREC?(beat_num+10'd1):10'd0;
+				nextmax_addr=contREC?(beat_num+10'd1):max_address;
+				nextwrite_en=contREC?1'b1:1'b0;
+			end
+			`PLAYstate:begin
+				nextstate	=play	 ?(beat_num<max_address?`PLAYstate:`STOPstate):`IDLEstate;
+				nextbeat_num=contPLAY?(beat_num+10'd1):10'd0;
+				nextmax_addr=max_address;
+				nextwrite_en=1'b0;
+			end
+			`STOPstate:begin
+				nextstate	=play?`STOPstate:`IDLEstate;
+				nextbeat_num=10'd0;
+				nextmax_addr=max_address;
+				nextwrite_en=1'b0;
+			end
+			default begin
+				nextstate	=`IDLEstate;
+				nextbeat_num=10'd0;
+				nextmax_addr=10'd0;
+				nextwrite_en=1'b0;
+			end
+		endcase
+	end
+	
+	assign start   =state==`RECORDstate?1'd1:1'd0;
+	assign freqDEC_REC =state==`PLAYstate?pitch_saved:6'd63;  //larger than 48 will be decoded as 0 hz
+	assign contPLAY=play &&(beat_num<max_address);
+	assign contREC =Begin&&(beat_num<`MAXbeat_num);
+	//*****************MEMORYING END***************************//
+	
+	//-----------------displayiny------------------------------//
+	
+	assign pixel_addr=h_cnt+640*(v_cnt-10'd384);
+ 
+    blk_mem_gen_0 blk_mem_gen_0_inst(
+      .clka(clk2),
+      .wea(0),
+      .addra(pixel_addr),
+      .dina(data[11:0]),
+      .douta(pixel_saved)
+    ); 
+	
+	always@(*)begin
+		case(black)
+			1'b0:begin
+				pressed  =(arbiter_mod12+6'd1)/2*23+arbiter_div12*160+1'd1;
+				pressed_w=((arbiter_mod12+6'd1)/2+6'd1)*23+arbiter_div12*160+1'd1;
+			end
+			1'b1:begin
+				pressed  =6'd17+arbiter_mod12/2*23+arbiter_div12*160+1'd1;
+				pressed_w=6'd17+arbiter_mod12/2*23+12+arbiter_div12*160+1'd1;
+			end
+			default begin
+				pressed  =9'd0;
+				pressed_w=9'd0;
+			end
+		endcase
+	end
+	
+	always@(posedge beat)begin
+		if(reset)begin
+			x[index]<=10'd0;
+			index<=6'd0;
+			active_y<=64'd0;
+		end
+		else begin
+			x[index]<=pressed;
+			index<=index+6'd1;
+			for(j=0;j<64;j=j+1)begin
+                active_y[j]<=j==index?(arbiter<6'd48 ?1'b1:1'b0):(y[j]==10'd0 ?1'b0:active_y[j]);
+            end
+		end
+	end
+	
+	always@(posedge shift_beat)begin
+		if(reset)begin
+			for(i=0;i<64;i=i+1)begin
+				y[i]<=10'd384;
+			end
+		end
+		else begin
+			for(j=0;j<64;j=j+1)begin
+				y[j]<= active_y[j]?(y[j]==10'd0 ?10'd0:(y[j]-10'd1)):10'd384;
+			end
+		end
+	end
+	
+	always@(*)begin
+		if(v_cnt<=10'd384)begin
+			for(k=0;k<64;k=k+1)begin
+				pixel_proper_helper[k]=((v_cnt<=y[k]+10'd6)&&v_cnt>y[k]&&(h_cnt<=x[k]+10'd12)&&h_cnt>x[k])?1'b1:1'b0;
+			end
+			pixel_proper=|pixel_proper_helper?orange:12'd0;
+		end
+		else begin
+			if(h_cnt>=pressed&&h_cnt<pressed_w)begin
+				pixel_proper=black?(v_cnt<=10'd439 ?gray:pixel_saved):(pixel_saved==12'd0 ?pixel_saved:gray);
+			end
+			else begin
+				pixel_proper=pixel_saved;
+			end
+		end
+	end
+	
+	assign black=(arbiter_mod12==4'd1)||(arbiter_mod12==4'd3)||(arbiter_mod12==4'd6)||(arbiter_mod12==4'd8)||(arbiter_mod12==4'd10);
+	assign arbiter_mod12=arbiter%12;
+	assign arbiter_div12=arbiter/12;
+	assign {RED,GREEN,BLUE}=vga_valid?pixel_proper:12'd0;
+	
+	//******************DISPLAY END****************************//
+	
+>>>>>>> origin/master
 endmodule
